@@ -1,0 +1,38 @@
+<div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                <th (click)="manageSort('code')">kurskod <span class="arrow">
+                        {{sortByColumn !== "code" ? '▲▼' : sortByColumn === "code" && sortAsc ? '▲'
+                        :'▼' }}
+                    </span>
+                </th>
+                <th (click)="manageSort('coursename')">namn <span class="arrow">
+                        {{sortByColumn !== "coursename" ? '▲▼' : sortByColumn === "coursename" && sortAsc ? '▲'
+                        :'▼' }}
+                    </span>
+                </th>
+                <th>kursplan</th>
+                <th (click)="manageSort('progression')">progression <span class="arrow">
+                        {{sortByColumn !== "progression" ? '▲▼' : sortByColumn === "progression" && sortAsc ? '▲'
+                        :'▼' }}
+                    </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(course of courses(); track course.code) {
+            <tr>
+                <td>{{course.code | uppercase}}</td>
+                <td>{{course.coursename}}</td>
+                <td>
+                    <a href={{course.syllabus}}>se kursplan</a>
+                </td>
+                <td>{{course.progression}}</td>
+            </tr>
+            } @empty {
+            <p>Finns inga kurser</p>
+            }
+        </tbody>
+    </table>
+</div>
