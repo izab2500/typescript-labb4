@@ -1,0 +1,8 @@
+h1 {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    margin-top:100px;
+}
