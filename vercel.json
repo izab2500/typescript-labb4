@@ -8,11 +8,5 @@
         "distDir": "dist/labb4"
       }
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
   ]
 }
