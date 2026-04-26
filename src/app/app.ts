@@ -1,9 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { Heading } from './heading/heading';
 import { CourseService } from './services/course-service';
+import { SearchForm } from './search-form/search-form';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Heading,SearchForm],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

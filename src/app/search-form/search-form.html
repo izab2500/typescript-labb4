@@ -1,0 +1,6 @@
+<form autocomplete="off">
+    <div>
+        <label for="search">sök:</label>
+        <input [(ngModel)]="searchString" (ngModelChange)="filterTable()" type="search" id="search" name="search" placeholder="Sök efter kurskod eller kursnamn">
+    </div>
+</form>
